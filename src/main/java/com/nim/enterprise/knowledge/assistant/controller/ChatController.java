@@ -1,9 +1,10 @@
 package com.nim.enterprise.knowledge.assistant.controller;
 
+import com.nim.enterprise.knowledge.assistant.dto.ChatRequest;
+import com.nim.enterprise.knowledge.assistant.dto.ChatResponse;
 import com.nim.enterprise.knowledge.assistant.service.ChatService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import jakarta.annotation.PostConstruct;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class ChatController {
@@ -14,8 +15,9 @@ public class ChatController {
         this.chatService = chatService;
     }
 
-    @GetMapping("/chat")
-    public String chat(@RequestParam String message) {
+
+    @PostMapping("/chat")
+    public ChatResponse chat(@RequestBody ChatRequest message) {
         return chatService.ask(message);
     }
 }
