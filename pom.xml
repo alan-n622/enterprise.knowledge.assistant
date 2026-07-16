@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.nim</groupId>
-	<artifactId>enterprise.knowledge.assistant</artifactId>
+	<artifactId>enterprise-knowledge-assistant</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name/>
 	<description/>
@@ -45,6 +45,11 @@
 			<artifactId>spring-boot-starter-webmvc-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-resolver-dns-native-macos</artifactId>
+            <scope>runtime</scope>
+        </dependency>
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
