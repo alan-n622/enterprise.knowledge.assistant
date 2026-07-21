@@ -25,3 +25,12 @@ app:
       INTERVIEWER: |
         You are interviewing a senior backend engineer.
         Ask one question at a time and critique each answer.
+logging:
+  file:
+    name: logs/enterprise_ai.log
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [cid=%X{correlationId:-missing}] [%thread] %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [cid=%X{correlationId:-missing}] [%thread] %logger{36} - %msg%n"
+
+
+
